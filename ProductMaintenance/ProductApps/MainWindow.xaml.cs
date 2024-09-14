@@ -40,6 +40,11 @@ namespace ProductApps
                 decimal wrapCharge = 5.00m;
                 decimal totalChargeM = cProduct.TotalPayment + deliveryCharge + wrapCharge;
                 totalChargeMTextBlock.Text = totalChargeM.ToString();
+
+                decimal gstRate = 1.1m;
+                decimal totalChargeGST = totalChargeM * gstRate;
+                totalChargeGSTTextBlock.Text = totalChargeGST.ToString();
+
             }
             catch (FormatException)
             {
